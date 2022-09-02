@@ -120,14 +120,14 @@ body {
     max-width: min(160px, 25vw);
 }
 .top-section {
-    background-image: url("images/bg-hero-desktop.svg");
+    background-image: url("public/images/bg-hero-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     padding-top: 2em;
 }
 @media (max-width: 50em) {
     .top-section {
-        background-image: url("images/bg-hero-mobile.svg");
+        background-image: url("public/images/bg-hero-mobile.svg");
     }
 }
 /********************** Utility Classes **********************/
