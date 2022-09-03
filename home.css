@@ -144,22 +144,19 @@ body {
 }
 .quality-images,
 .quality-content {
-    padding: 5em;
-
+    padding: min(7.5vw, 5em);
 }
+
 @media (max-width: 50em) {
-    
     .top-section {
         background-image: url("public/images/bg-hero-mobile.svg");
     }
-    .quality-images,
-.quality-content {
-    padding: 0;
 
-}
-    .quality-content,.quality-images{
-    padding-inline: var(--size-750);
+    .quality-content,
+    .quality-images {
+        padding: 0;
 
+        padding-inline: var(--size-750);
     }
 
     .quality-images {
@@ -219,7 +216,7 @@ body {
 }
 .fs-secondary-heading {
     font-size: var(--fs-secondary-heading);
-    line-height: 2.5;
+    line-height: 1.25;
 }
 .fs-cta-heading {
     font-size: var(--fs-last-btn-heading);
