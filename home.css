@@ -129,6 +129,9 @@ body {
 .logo {
     max-width: min(160px, 25vw);
 }
+
+/* Top  Section */
+
 .top-section {
     background-image: url("public/images/bg-hero-desktop.svg");
     background-repeat: no-repeat;
@@ -146,19 +149,30 @@ body {
     padding: min(7.5vw,3em);
 }
 
+.mid-section{
+    position:relative
+}
 
 .cta{
     --max-width:800px;
     --min-margin:1.3333em;
-
     
-
-    background-color: beige;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    box-shadow: 0 0 0.6rem  hsla(0,0%,0%,0.1);
+    
     width:min(var(--max-width),calc(100% - (var(--min-margin) * 2 )));
-    height: 15.66em;
+    height: 9.722em;
     margin-inline:auto;
+    margin-top: 5.5em;
+    
+    /* z-index: 10; */
 
+    border-radius: var(--size-300);
+    background-color: white;
 }
 
 @media (min-width:50em) {
@@ -168,8 +182,12 @@ body {
     .image-first .quality-content{
         padding: 3em 3em 3em 0;
     }
-    
+    .cta{
+        height: 15.6666em;
+    }
+
 }
+
 
 @media (max-width: 50em) {
     .top-section {
@@ -243,7 +261,7 @@ body {
     line-height: 1.25;
 }
 .fs-cta-heading {
-    font-size: var(--fs-last-btn-heading);
+    font-size: var(--fs-cta-heading);
 }
 .fs-body {
     font-size: var(--fs-body);
