@@ -104,6 +104,12 @@ body {
     color: #000;
     padding: 0.75em 2em;
 }
+
+.button:hover,
+.button:focus-visible {
+    opacity: 0.5;
+}
+
 @media (min-width: 50em) {
     .button,
     .button[btn-type="header"] {
@@ -111,12 +117,6 @@ body {
         box-shadow: 0 0.6em 1em -1em var(--clr-neutral-400);
     }
 }
-
-.button:hover,
-.button:focus-visible {
-    opacity: 0.5;
-}
-
 /* Header */
 .primary-header {
     padding-bottom: var(--size-900);
@@ -142,9 +142,33 @@ body {
     margin-block: var(--size-750);
     box-shadow: 0 0 0.5em 0em hsl(0, 0%, 0%, 0.1);
 }
-.quality-images,
-.quality-content {
-    padding: min(7.5vw, 5em);
+.quality-images {
+    padding: min(7.5vw,3em);
+}
+
+
+.cta{
+    --max-width:800px;
+    --min-margin:1.3333em;
+
+    
+
+    background-color: beige;
+
+    width:min(var(--max-width),calc(100% - (var(--min-margin) * 2 )));
+    height: 15.66em;
+    margin-inline:auto;
+
+}
+
+@media (min-width:50em) {
+    .image-second .quality-content{
+        padding: 3em 0 3em 3em;
+    }
+    .image-first .quality-content{
+        padding: 3em 3em 3em 0;
+    }
+    
 }
 
 @media (max-width: 50em) {
@@ -154,9 +178,9 @@ body {
 
     .quality-content,
     .quality-images {
-        padding: 0;
+    
 
-        padding-inline: var(--size-750);
+        padding: 0 var(--size-750) 0;
     }
 
     .quality-images {
