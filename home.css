@@ -146,48 +146,46 @@ body {
     box-shadow: 0 0 0.5em 0em hsl(0, 0%, 0%, 0.1);
 }
 .quality-images {
-    padding: min(7.5vw,3em);
+    padding: min(7.5vw, 3em);
 }
 
-.mid-section{
-    position:relative
+.mid-section {
+    position: relative;
 }
 
-.cta{
-    --max-width:800px;
-    --min-margin:1.3333em;
-    
+.cta {
+    --max-width: 800px;
+    --min-margin: 1.3333em;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
-    box-shadow: 0 0 0.6rem  hsla(0,0%,0%,0.1);
-    
-    width:min(var(--max-width),calc(100% - (var(--min-margin) * 2 )));
+
+    box-shadow: 0 0 0.6rem hsla(0, 0%, 0%, 0.1);
+
+    width: min(var(--max-width), calc(100% - (var(--min-margin) * 2)));
     height: 9.722em;
-    margin-inline:auto;
+    margin-inline: auto;
     margin-block: 3em -1em;
-    
+
     /* z-index: 10; */
 
     border-radius: var(--size-300);
     background-color: white;
 }
 
-@media (min-width:50em) {
-    .image-second .quality-content{
+@media (min-width: 50em) {
+    .image-second .quality-content {
         padding: 3em 0 3em 3em;
     }
-    .image-first .quality-content{
+    .image-first .quality-content {
         padding: 3em 3em 3em 0;
     }
-    .cta{
+    .cta {
         height: 15.6666em;
     }
-
 }
-
 
 @media (max-width: 50em) {
     .top-section {
@@ -196,8 +194,6 @@ body {
 
     .quality-content,
     .quality-images {
-    
-
         padding: 0 var(--size-750) 0;
     }
 
@@ -207,6 +203,78 @@ body {
     .quality-content {
         padding-bottom: var(--size-750);
     }
+}
+
+/* Footer Section */
+.logo[logo-type="footer"] {
+    margin-bottom: 2em;
+    display: block;
+}
+
+.footer ul[role="list"] {
+    padding: 0;
+}
+.footer-info {
+    display: grid;
+    grid-template-columns: 2em auto;
+    gap: 1em;
+    margin-block: 1em;
+}
+.social-icon {
+    border: 1px solid #fff;
+    border-radius: 1em;
+
+    fill: #fff;
+
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.5em;
+}
+.socials {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+.copyright {
+    text-align: center;
+    margin-bottom: 1em;
+}
+@media (min-width:50em) {
+    
+    .footer-nav>:nth-child(1){
+        grid-area: one;
+    }
+    .footer-nav>:nth-child(2){
+        grid-area: two;
+    }
+    .footer-nav>:nth-child(3){
+        grid-area: three;
+    }
+    .footer-nav>:nth-child(4){
+       grid-area: four;
+    }
+    .footer-nav>:nth-child(5){
+        grid-area: five;
+    }
+    .footer-nav>:nth-child(6){
+        grid-area: six;
+    }
+    .footer-nav{
+        display: grid;
+        grid-template-areas: 
+        "one four"
+        "two five"
+        "three six";
+        gap: 1rem;
+    }
+    .socials{
+        justify-content: left;
+        height:70%;
+    }
+    .copyright{
+        text-align: left;
+    }
+    
 }
 /********************** Utility Classes **********************/
 
@@ -367,7 +435,7 @@ body {
 }
 .even-columns,
 .three-columns {
-    gap: 3em;
+    gap: 2em;
 }
 
 @media (min-width: 50em) {
