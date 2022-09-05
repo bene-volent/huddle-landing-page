@@ -239,6 +239,9 @@ body {
     text-align: center;
     margin-bottom: 1em;
 }
+.address{
+    font-style: normal;
+}
 @media (min-width:50em) {
     
     .footer-nav>:nth-child(1){
