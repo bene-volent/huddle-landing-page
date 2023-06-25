@@ -1,4 +1,4 @@
-/********************** CSS Reset **********************/
+    /********************** CSS Reset **********************/
 
 @import "/reset.css";
 
@@ -165,14 +165,18 @@ body {
     box-shadow: 0 0 0.6rem hsla(0, 0%, 0%, 0.1);
 
     width: min(var(--max-width), calc(100% - (var(--min-margin) * 2)));
-    height: 9.722em;
+    height: 9.75em;
     margin-inline: auto;
-    margin-block: 3em -1em;
+    margin-block: 3em calc(-4.825em - var(--size-900));
 
     /* z-index: 10; */
 
     border-radius: var(--size-300);
     background-color: white;
+}
+
+footer{
+    padding-block:calc(7.5em + var(--size-900)) var(--size-900);
 }
 
 @media (min-width: 50em) {
@@ -183,7 +187,9 @@ body {
         padding: 3em 3em 3em 0;
     }
     .cta {
-        height: 15.6666em;
+        height: 15em;
+        margin-block: 3em calc(-7.5em - var(--size-900));
+        
     }
 }
 
